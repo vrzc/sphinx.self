@@ -37,7 +37,7 @@ class User extends bot {
                         channel_id: message.channel.id,
                         data: {
                             component_type: 2,
-                            custom_id: 'enter-giveaway'
+                            custom_id: message.components[0].components[0].customId
                         },
                         guild_id: message.guild.id,
                         message_flage: 0,
@@ -146,4 +146,9 @@ class User extends bot {
     }
 }
 const eventEmitter = new EventEmitter();
+const Discord = require("discord.js-selfbot-v13");
+const client = new Discord.Client({checkUpdate: false})
+
+new User(client).autoReaction()
+client.login('NjQyNTEzODMyMjcwNjI2ODE3.GhyhlE.CkOQFKOlsheRoq318QplSrZJVquT0JRYsq68hk')
 module.exports = {User, eventEmitter}
