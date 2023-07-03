@@ -1,6 +1,6 @@
 {
   "name": "sphinx-self",
-  "version": "0.0.4-dev",
+  "version": "0.0.6-dev",
   "description": "An Extended package to sphinx-run",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,5 @@
   "bugs": {
     "url": "https://github.com/vrzc/sphinx.self.git/issues"
   },
-  "homepage": "https://github.com/vrzc/sphinx.self.git#readme",
-  "dependencies": {
-    "discord.js-selfbot-v13": "^2.14.6"
-  }
+  "homepage": "https://github.com/vrzc/sphinx.self.git#readme"
 }

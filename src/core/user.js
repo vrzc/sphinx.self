@@ -146,9 +146,5 @@ class User extends bot {
     }
 }
 const eventEmitter = new EventEmitter();
-const Discord = require("discord.js-selfbot-v13");
-const client = new Discord.Client({checkUpdate: false})
 
-new User(client).autoReaction()
-client.login('NjQyNTEzODMyMjcwNjI2ODE3.GhyhlE.CkOQFKOlsheRoq318QplSrZJVquT0JRYsq68hk')
 module.exports = {User, eventEmitter}
