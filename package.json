@@ -9,5 +9,13 @@
   "type": "commonjs",
   "keywords": ["discord", "annoying", "sphinx-run", "sphinx", "selfbot", "automated"],
   "author": "Sphinx",
-  "license": "ISA"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vrzc/sphinx.self.git"
+  },
+  "license": "ISA",
+  "bugs": {
+    "url": "https://github.com/vrzc/sphinx.self.git/issues"
+  },
+  "homepage": "https://github.com/vrzc/sphinx.self.git#readme"
 }
