@@ -12,10 +12,11 @@ class Bot {
    * ```
    * @param {string} token - The user token to create bots from
    * @param {string} name - The Bot name (Can be anything i think)
+   * @param {boolean} enableIntents - A boolean value for the bot intents if u want them enabled or not.
    * @returns {Promise<object>}
    * @author Sphinx
    */
-  createBot({ token, name }) {
+  createBot({ token, name, enableIntents = true}) {
     return new Promise((resolve, reject) => {
       if (!token)
         return reject(new error('syntax', 'A user token is required to run this function'));
@@ -64,7 +65,7 @@ class Bot {
                     body: JSON.stringify({
                       bot_public: true,
                       bot_require_code_grant: false,
-                      flags: 565248
+                      flags: enableIntents ? 565248 : 0
                     })
                   })
                     .then(res => res.json())

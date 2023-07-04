@@ -41,7 +41,11 @@ client.login("Your Discord Token") //Not saved.
 ## Making Bots using sphinx-self.
 ```js
 const sphinx = require("sphinx-self");
-let {token} = new sphinx.Core().createBot({token: "UserToken", name: "3yl"})
+const gen = new sphinx.Core();
+(async() => {
+    let {token} = await gen.createBot({token: "UserToken", name: "3yl"}) //CreateBot returns promise cuz i don't want people killing discord's api
+    console.log(token) 
+})()
 ```
 
 ### Contributing.
