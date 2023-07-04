@@ -1,15 +1,20 @@
 const { EventEmitter } = require("node:events");
 const {error} = require("./handleErrors")
 const wait = require("node:timers/promises").setTimeout;
-const {bot} = require("./bot")
-
-class User extends bot {
+const {Bot} = require("./bot")
+class User extends Bot {
     constructor(client) { super(client) ;this.client = client; }
     #server() {
         console.log("This Package was made by `3yl`. For Questions about it you can dm me or join this server `discord.gg/rAgTGQkbG9`")
     }
     /**
      * Auto Reaction for user accounts
+     * ```js
+     * const Discord = require("discord.js-selfbot-v13");
+     * const client = new Discord.Client();
+     * const sphinx = require("sphinx-self");
+     * new sphinx.Core(client).autoReaction(options if any);
+     * ```
      * @param {string} sessionid - SessionID. Don't change if you don't know what that is
      * @param {Array} customBotId - An Array of customBot ID's
      * @param {string} reactionName - Don't change if you don't understand what that is.

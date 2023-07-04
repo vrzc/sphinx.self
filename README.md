@@ -38,6 +38,12 @@ new sphinx.Core(client).leveling() //hover for options
 client.login("Your Discord Token") //Not saved.
 ```
 
+## Making Bots using sphinx-self.
+```js
+const sphinx = require("sphinx-self");
+let {token} = new sphinx.Core().createBot({token: "UserToken", name: "3yl"})
+```
+
 ### Contributing.
 
 As this is a solo project i would like to see how other people would code this, So anyone who's intrested in adding things you're more than welcome to open a pull request by forking the github repo.

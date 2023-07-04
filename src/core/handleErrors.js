@@ -5,6 +5,10 @@ class error extends Error {
                 super("[Syntax Error]: " + message)
                 this.name = ''
                 break;
+            case "rate":
+                super("[RATE_LIMIT_REACHED]: " + message)
+                this.name = ''
+                break;
             default:
                 super("[Unknown Error]", message)
         }
