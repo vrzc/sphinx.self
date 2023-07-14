@@ -1,6 +1,6 @@
 {
   "name": "sphinx-self",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An Extended package to sphinx-run",
   "main": "index.js",
   "scripts": {

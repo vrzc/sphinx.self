@@ -5,7 +5,9 @@ const {Bot} = require("./bot")
 class User extends Bot {
     constructor(client) { super(client) ;this.client = client; }
     #server() {
-        console.log("This Package was made by `3yl`. For Questions about it you can dm me or join this server `discord.gg/rAgTGQkbG9`")
+        console.log(`This Package was made by \`3yl\`. For Questions about it you can dm me or join this server \`discord.gg/rAgTGQkbG9\`.
+        
+        Don't join the old thailand codes they stole the server (MohaDev69). Join new server https://discord.gg/Xrjd28Dr`)
     }
     /**
      * Auto Reaction for user accounts
@@ -67,7 +69,7 @@ class User extends Bot {
   
                 await wait(timeout)
                 message.react('🎉').then(_ => {
-                    this.emit('giveawayCreated', {url: message.url})
+                    eventEmitter.emit('giveawayCreated', {url: message.url})
                 })
             }
             if(message.author.id === '606026008109514762') {
@@ -77,7 +79,7 @@ class User extends Bot {
                 await wait(timeout)
                 message.reactions.cache.forEach(async react => {
                     if(react._emoji.name !== 'giveaways') return;
-                    message.react(react._emoji).then(_ => this.emit('giveawayCreated', {url: message.url}))
+                    message.react(react._emoji).then(_ => eventEmitter.emit('giveawayCreated', {url: message.url}))
                 })
             }
             if(customBotId) {
@@ -90,7 +92,7 @@ class User extends Bot {
                         if(reactionName) {
                             if(react._emoji.name !== reactionName) return;
                         }
-                        message.react(react._emoji).then(_ => this.emit('giveawayCreated', {url: message.url}))
+                        message.react(react._emoji).then(_ => eventEmitter.emit('giveawayCreated', {url: message.url}))
                     })
                 }
             } else return;
@@ -151,5 +153,6 @@ class User extends Bot {
     }
 }
 const eventEmitter = new EventEmitter();
+
 
 module.exports = {User, eventEmitter}
